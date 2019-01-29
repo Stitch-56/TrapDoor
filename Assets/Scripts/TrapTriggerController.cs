@@ -25,6 +25,6 @@ public class TrapTriggerController : MonoBehaviour {
 
         // JH - Call the OpenTrapDoor() function on the LevelManager
         levelManager.OpenTrapDoor();
-        Debug.Log("Activated Checkpoint" + transform.position);
+        Debug.Log("Trap has been opened");
     }
 }
