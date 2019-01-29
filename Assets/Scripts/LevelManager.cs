@@ -23,15 +23,25 @@ public class LevelManager : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            JointMotor2D theMotor = pivotTrapDoor.motor;
-            theMotor.motorSpeed = 100f;
-            pivotTrapDoor.motor = theMotor;
+            OpenTrapDoor();
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            JointMotor2D theMotor = pivotTrapDoor.motor;
-            theMotor.motorSpeed = -100f;
-            pivotTrapDoor.motor = theMotor;
+            CloseTrapDoor();
         }
+    }
+
+    public void OpenTrapDoor()
+    {
+        JointMotor2D theMotor = pivotTrapDoor.motor;
+        theMotor.motorSpeed = 100f;
+        pivotTrapDoor.motor = theMotor;
+    }
+
+    public void CloseTrapDoor()
+    {
+        JointMotor2D theMotor = pivotTrapDoor.motor;
+        theMotor.motorSpeed = -100f;
+        pivotTrapDoor.motor = theMotor;
     }
 }
